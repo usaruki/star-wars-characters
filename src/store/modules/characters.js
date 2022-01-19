@@ -61,8 +61,7 @@ export default {
         if ([200,201].includes(res.status)) {
           if (res.data.count > 0) {
             let first = res.data.results[0];
-            //context.dispatch('fetchCharacterData', first);
-            context.dispatch('multipleFetchCharacterData', first);
+            context.dispatch('fetchCharacterData', first);
           } else {
             context.commit('setViewingCharacter', '');
           }
@@ -71,32 +70,7 @@ export default {
         console.log(err);
       })
     },
-    async fetchCharacterData(context, character) {
-      let keys = context.rootGetters['api/getRootKeys'];
-      let characterData = {};
-      Object.keys(character).forEach(async function (k) {
-        if (keys.includes(k)) {
-          characterData[k] = [];
-          character[k].forEach(async function (url) {
-            let res = await axios.get(url);
-            if ([200,201].includes(res.status)) {
-              characterData[k].push(res.data);
-            }
-          })
-        } else if(k === 'homeworld') {
-          axios.get(character[k]).then(res => {
-            if ([200,201].includes(res.status)) {
-              characterData[k] = res.data;
-            }
-          })
-        } else {
-          characterData[k] = character[k];
-        }
-      })
-      context.commit('setViewingCharacter', characterData);
-      console.log(characterData);
-    },
-    multipleFetchCharacterData(context, character) {
+    fetchCharacterData(context, character) {
       let keys = context.rootGetters['api/getRootKeys'];
       let characterData = {};
       let requests = [];

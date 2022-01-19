@@ -65,7 +65,6 @@ body {
   font-family: var(--sw-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  //transform: perspective(300px) rotateX(20deg);
 }
 
 @keyframes fadeIn {
@@ -77,6 +76,7 @@ body {
   animation: fadeIn 500ms ease-in-out;
 }
 
+
 #app {
   *::-webkit-scrollbar {
     height: var(--scroll-size);
@@ -86,18 +86,18 @@ body {
     background-color: transparent;
     border-radius: 50px;
   }
-
+  
   *::-webkit-scrollbar-thumb {
     background-color: var(--scroll-color);
     border-radius: 50px;
   }
-
   --nav-height: 10.5rem;
   --nav-border-height: 6px;
   --nav-border: var(--nav-border-height) double var(--text-color);
 
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
 
   --text-color: var(--sw-black);
   --bg-color: var(--sw-white);

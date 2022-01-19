@@ -49,8 +49,8 @@ export default {
     },
     changeMode() {
       let mode = '';
-      if (this.userMode === '3D') mode = '2D';
-      else mode = '3D';
+      if (this.userMode === '2D') mode = '3D';
+      else mode = '2D';
       this.setUserMode(mode)
       window.localStorage.setItem('user-mode', this.userMode)
     }

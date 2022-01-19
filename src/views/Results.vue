@@ -1,5 +1,5 @@
 <template>
-  <div class="results" >
+  <div class="results-view" >
     <search-bar :urlQuery="$route.params.query"/>
     <paginator :pageCount="pageCount" :currentPage="page" :urlQuery="urlQuery">
       <character-list :list="results"/>
@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import SearchBarVue from '../components/SearchBar.vue'
-import PaginatorVue from '../components/Paginator.vue'
-import CharacterListVue from '../components/CharacterList.vue'
 import { mapGetters, mapActions, mapMutations } from 'vuex'
+import CharacterListVue from '../components/Results/CharacterList.vue'
+import PaginatorVue from '../components/Results/Paginator.vue'
+import SearchBarVue from '../components/Results/SearchBar.vue'
 
 export default {
   name: 'Results',
@@ -61,7 +61,7 @@ export default {
 
 <style lang="scss">
 
-.results {
+.results-view {
   height: calc(100vh - var(--nav-height) - var(--nav-border-height));
 }
 </style>

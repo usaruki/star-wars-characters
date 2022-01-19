@@ -9,8 +9,7 @@ const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/search/:query?/:page?', name: 'Results', component: Results },
   { path: '/search//:page?', name: 'ResultsEmpty', component: Results },
-  { path: '/character/:character?', name: 'Character', component: Character },
-  // { path: '/about', name: 'About', component: () => import(/* webpackChunkName: "about" */ '../views/About.vue') }
+  { path: '/character/:character?', name: 'Character', component: Character }
 ]
 
 export default new VueRouter({ 

@@ -6,8 +6,7 @@
 </template>
 
 <script>
-import SearchVue from './icons/Search.vue';
-// import { mapActions } from 'vuex';
+import SearchVue from '../icons/Search.vue';
 export default {
   name: 'SearchBar',
   components: {
@@ -24,7 +23,6 @@ export default {
     }
   },
   methods: {
-    // ...mapActions('characters', ['searchCharacters']),
     search() {
       let query = this.$route.params.query ?? ''; 
       if ( query !== this.query) {

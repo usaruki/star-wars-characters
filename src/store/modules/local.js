@@ -2,7 +2,7 @@ export default {
   namespaced: true,
   state: {
     userTheme: window.localStorage.getItem('user-theme') ?? 'light',
-    userMode: window.localStorage.getItem('user-mode') ?? '3D'
+    userMode: window.localStorage.getItem('user-mode') ?? '2D'
   },
   getters: {
     getUserTheme(state) {

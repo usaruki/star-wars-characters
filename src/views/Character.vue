@@ -40,7 +40,6 @@ export default {
     ]),
     ...mapActions('characters', [
       'fetchCharacterData',
-      'multipleFetchCharacterData',
       'findFirstCharacter'
     ])
   },
@@ -52,7 +51,7 @@ export default {
       return name.includes(query);
     });
     if (index > -1) {
-      this.multipleFetchCharacterData(this.results[index]);
+      this.fetchCharacterData(this.results[index]);
     } else {
       this.findFirstCharacter(query);
     }

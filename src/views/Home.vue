@@ -1,11 +1,11 @@
 <template>
-  <div class="home">
+  <div class="home-view">
     <search-bar/>
   </div>
 </template>
 
 <script>
-import SearchBarVue from '../components/SearchBar.vue'
+import SearchBarVue from '../components/Results/SearchBar.vue'
 
 export default {
   name: 'Home',

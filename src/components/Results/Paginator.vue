@@ -1,6 +1,6 @@
 <template>
-  <div class="paginator-viewport">
-    <div :class="{'paginator': true, 'perfers-3d': perspective === '3D'}">
+  <div class="paginator">
+    <div :class="{'paginator-viewport': true, 'perfers-3d': perspective === '3D'}">
       <slot/>
     </div>  
     <ul class="pages-listing" v-if="pageCount > 0">
@@ -62,7 +62,7 @@ export default {
 </script>
 
 <style lang="scss">
-.paginator {
+.paginator-viewport {
   padding-block: 1.5rem;
   height: 100%;
   overflow-y: scroll;
@@ -75,7 +75,7 @@ export default {
   }
 }
 
-.paginator-viewport {
+.paginator {
   display: grid;
   grid-template-rows: 1fr auto;
   overflow-x: hidden;
