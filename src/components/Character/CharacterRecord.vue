@@ -63,7 +63,7 @@ export default {
       return species === '' ? '?' : species;
     },
     homeworld() {
-      return this.character.homeworld.name;
+      return this.character.homeworld.name
     }
   }
 }
